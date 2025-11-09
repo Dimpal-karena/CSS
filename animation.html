@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-style</title>
+    <style>
+        :root {
+            overflow: scroll; /* hides any part of the sun below the horizon */
+            background-color: lightblue;
+            display: grid;
+            justify-content: center; /* centers the sun in the background */
+}
+
+.sun {
+  background-color: yellow;
+  border-radius: 50%; /* creates a circular background */
+  height: 100vb; /* makes the sun the size of the viewport */
+  aspect-ratio: 1 / 1;
+  animation: 4s ease-in 0s infinite alternate sun-rise;
+}
+
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(100vb);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+</body>
+</html>
