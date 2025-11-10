@@ -10,12 +10,14 @@
   border-radius: 10px;
   width: 100px;
   height: 100px;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
 }
 
 .box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
-  animation-direction: alternate;
+  animation-play-state: running;
 }
 
 @keyframes rotate {
