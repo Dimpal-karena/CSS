@@ -8,7 +8,6 @@
         #container{
             height: 300px;
             overflow-y: scroll;
-            scroll-timeline-name: --square-timeline;
             position: relative;
         }
         #square{
@@ -19,7 +18,9 @@
             animation-name: rotateAnimation;
             animation-duration: 1ms;
             animation-direction: alternate;
-            animation-timeline: --square-timeline;
+            animation-timeline: scroll(block nearest); 
+             /* also use as ( in container 
+             scroll-timeline: --square-timeline; animation-timeline: --square-timeline; */
             position: absolute;
             bottom: 0;
         }
